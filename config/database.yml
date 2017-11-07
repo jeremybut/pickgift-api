@@ -5,12 +5,12 @@ default: &default
 
 development:
   <<: *default
-  database: scratchagift_dev
+  database: pickgift_dev
 
 test:
   <<: *default
-  database: scratchagift_test
+  database: pickgift_test
 
 production:
   <<: *default
-  database: scratchagift_prod
+  database: pickgift_prod
