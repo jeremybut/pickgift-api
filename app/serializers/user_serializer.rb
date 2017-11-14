@@ -29,16 +29,7 @@
 #  last_name              :string
 #
 
-class User < ApplicationRecord
-  devise :invitable, :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
-  has_many :user_villages, dependent: :destroy
-  has_many :villages, through: :user_villages
-  has_many :invitations, class_name: 'User',
-                         as: :invited_by, dependent: :destroy
-
-  def send_invitation_instructions
-    NotifierMailer.invitation_instructions(self).deliver_later
-  end
+class UserSerializer < ActiveModel::Serializer
+  attributes :id, :email, :first_name, :last_name, :invitation_accepted_at
+  has_many :invitations
 end

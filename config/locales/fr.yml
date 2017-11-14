@@ -1,0 +1,7 @@
+fr:
+  mailer:
+    invitation_instructions:
+      subject: "Instructions d'invitation"
+      hello: "Bonjour %{first_name},"
+      content: "Vous avez été invité à découvrir l'aventure PickGift."
+      button_text: "Cliquez ici pour rejoindre votre village"
