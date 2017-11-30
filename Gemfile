@@ -23,10 +23,13 @@ gem 'sidekiq', '~> 5.0', '>= 5.0.5'
 group :development do
   gem 'annotate'
   gem 'better_errors'
-  gem 'faker', '~> 1.8', '>= 1.8.4'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rubocop'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :development, :test do
+  gem 'faker'
 end

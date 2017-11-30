@@ -217,7 +217,7 @@ DEPENDENCIES
   devise (~> 4.3)
   devise_invitable (~> 1.7, >= 1.7.2)
   doorkeeper (~> 4.2, >= 4.2.6)
-  faker (~> 1.8, >= 1.8.4)
+  faker
   listen (>= 3.0.5, < 3.2)
   mailjet (~> 1.5, >= 1.5.4)
   pg (~> 0.21.0)
@@ -233,4 +233,4 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
 
 BUNDLED WITH
-   1.16.0.pre.3
+   1.16.0
