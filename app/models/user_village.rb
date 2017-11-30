@@ -14,8 +14,6 @@
 #
 
 class UserVillage < ApplicationRecord
-  attr_accessor :include_author_to_users
-
   belongs_to :user
   belongs_to :village
 end
