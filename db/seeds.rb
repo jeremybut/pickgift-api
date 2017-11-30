@@ -10,7 +10,23 @@ User.create!(
   last_name: 'Buttice'
 )
 
-3.times do
+User.create!(
+  email: 'teddy@tymate.com',
+  password: 'password',
+  password_confirmation: 'password',
+  first_name: 'Teddy',
+  last_name: 'Lecaillon'
+)
+
+Doorkeeper::Application.create!(
+  name: 'Web',
+  uid: 'a3309e8d-8ffe-4d1f-9feb-8ad018b45d3d',
+  secret: '906e4ade-e5e8-4a05-a4e4-4b588d18fa08',
+  redirect_uri: 'urn:ietf:wg:oauth:2.0:oob',
+  scopes: 'web'
+)
+
+30.times do
   v = Village.create!(
     display_name: Faker::Name.name,
     max_inscription_date: Faker::Date.forward(23),
@@ -24,4 +40,7 @@ User.create!(
     u.skip_invitation = true
   end
   v.users << user
+  v.users << User.find(2)
 end
+
+UserVillage.where(user_id: 2).update_all(admin: true)
